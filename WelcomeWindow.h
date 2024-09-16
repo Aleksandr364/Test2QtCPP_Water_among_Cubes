@@ -214,7 +214,6 @@ private:
             allMatrices.push_back(matrix);
             // Очищаем текущую матрицу.
             matrix.clear();
-            matrix.resize(0);
             // Очищаем n и m.
             n = 0;
             m = 0;
@@ -478,7 +477,6 @@ private:
                             cuboidPtrs[l]->status = Cuboid::CuboidType::unknown;
                         // Обнуляем вектор cuboidPtrs.
                         cuboidPtrs.clear();
-                        cuboidPtrs.resize(0);
                         // Сбрасываем текущий flow на unknown.
                         CuboidsArray[iCur][jCur].flow = Cuboid::CuboidDirection::unknown;
                         // Увеличиваем высоту тупикового кубоида на 1.
@@ -497,7 +495,6 @@ private:
                         cuboidPtrs[l]->status = Cuboid::CuboidType::unknown;
                     // Обнуляем вектор cuboidPtrs.
                     cuboidPtrs.clear();
-                    cuboidPtrs.resize(0);
                     // Сбрасываем текущий flow на unknown.
                     CuboidsArray[iCur][jCur].flow = Cuboid::CuboidDirection::unknown;
                     // Стартовый кубоид становится waterfall.
@@ -517,7 +514,6 @@ private:
             fprintf(file, "%zu\n", V);
             // Обнуляем вектор кубоидов.
             CuboidsArray.clear();
-            CuboidsArray.resize(0);
             // Обнуляем переменные.
             V = 0;
             iCur = 0;
